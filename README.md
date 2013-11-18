@@ -11,6 +11,7 @@ It uses `Postgres Hstore` extension to store forms data.
 
 This project is fork of [django-dynamic-forms](https://github.com/Markush2010/django-dynamic-forms) by [Markush2010](https://github.com/Markush2010) mainly to use Postgres Hstore by default.
 
+Note: Hstore support is work in progress.
 
 INSTALLATION
 ============
