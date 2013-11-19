@@ -11,10 +11,20 @@ It uses `Postgres Hstore` extension to store forms data.
 
 This project is fork of [django-dynamic-forms](https://github.com/Markush2010/django-dynamic-forms) by [Markush2010](https://github.com/Markush2010) mainly to use Postgres Hstore by default.
 
-Note: Hstore support is work in progress.
 
-INSTALLATION
-============
+## INSTALL
+```
+1. pip install -r requirements.txt
+2. pip install dynamic_forms
+```
+Postgres extension `Hstore` must be installed manually.
+ 
+```
+CREATE EXTENSION Hstore;
+```
+
+## USAGE
+
 
 Add ``'dynamic_forms'`` to the ``INSTALLED_APPS``::
 
@@ -39,8 +49,7 @@ see *all* other recipients. See [send_mail](https://docs.djangoproject.com/en/st
 in the officiall documentation.
 
 
-Example
-=======
+## Example
 
 1. Change into the ``example/`` directory
 2. Run ``./manage.py runserver``
@@ -53,8 +62,7 @@ The *admin* is available at http://127.0.0.1:8000/admin/.
 You can find an example form at http://127.0.0.1:8000/example-form/.
 
 
-Running the tests
-=================
+## Running the tests
 
 1. Change into the ``tests/`` directory
 2. Run ``./runtests.sh``
