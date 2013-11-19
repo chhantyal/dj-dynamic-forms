@@ -15,7 +15,7 @@ This project is fork of [django-dynamic-forms](https://github.com/Markush2010/dj
 ## Install
 ```
 1. pip install -r requirements.txt
-2. pip install dynamic_forms
+2. pip install dj_dynamic_forms
 ```
 Postgres extension `Hstore` must be installed manually.
  
