@@ -13,6 +13,9 @@ from django.utils.encoding import force_text, python_2_unicode_compatible
 from django.utils.html import escape, mark_safe
 from django.utils.translation import ugettext as _
 
+from djorm_hstore.fields import DictionaryField
+from djorm_hstore.models import HStoreManager
+
 from dynamic_forms.actions import action_registry
 from dynamic_forms.fields import TextMultiSelectField
 from dynamic_forms.formfields import dynamic_form_field_registry
@@ -138,8 +141,9 @@ class FormFieldModel(models.Model):
 class FormModelData(models.Model):
     form = models.ForeignKey(FormModel, on_delete=models.SET_NULL,
         related_name='data', null=True)
-    value = models.TextField(_('Form data'), blank=True, default='')
+    value = DictionaryField(_('Form data'), blank=True, default='')
     submitted = models.DateTimeField(_('Submitted on'), auto_now_add=True)
+    objects = HStoreManager()
 
     class Meta:
         verbose_name = _('Form data')
