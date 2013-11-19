@@ -14,13 +14,13 @@ from dynamic_forms import get_version
 
 
 setup(
-    name='django-dynamic-forms',
+    name='dj-dynamic-forms',
     version=get_version(),
-    description='django-dynamic-forms is a reusable Django application to create and configure forms through the admin.',
-    long_description=read('README.rst'),
-    author='Markus Holtermann',
-    author_email='info@markusholtermann.eu',
-    url='http://github.com/Markush2010/django-dynamic-forms',
+    description='Dynamic forms for Django - data storage in Postgres Hstore. It is a reusable Django application to create and configure forms through the admin.',
+    long_description=read('README.md'),
+    author='Nar Kumar Chhantyal',
+    author_email='nkchhantyal@gmail.com',
+    url='http://github.com/chhantyal/dj-dynamic-forms',
     license='BSD',
     packages=[
         'dynamic_forms',
@@ -33,7 +33,7 @@ setup(
         ]
     },
     install_requires=[
-        'Django>=1.4',
+        'Django>=1.5',
         'django-appconf>=0.6',
         'six',
     ],
