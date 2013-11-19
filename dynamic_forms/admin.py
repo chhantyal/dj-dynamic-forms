@@ -173,7 +173,7 @@ admin.site.register(FormModel, FormModelAdmin)
 
 
 class FormModelDataAdmin(admin.ModelAdmin):
-    list_display = ('form', 'pretty_value', 'submitted')
+    list_display = ('form', 'value', 'submitted')
     model = FormModelData
 
 admin.site.register(FormModelData, FormModelDataAdmin)
