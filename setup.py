@@ -17,7 +17,7 @@ setup(
     name='dj-dynamic-forms',
     version=get_version(),
     description='Dynamic forms for Django - data storage in Postgres Hstore. It is a reusable Django application to create and configure forms through the admin.',
-    long_description=read('README.md'),
+    long_description=read('README.rst'),
     author='Nar Kumar Chhantyal',
     author_email='nkchhantyal@gmail.com',
     url='http://github.com/chhantyal/dj-dynamic-forms',
