@@ -1,13 +1,13 @@
-# Django settings for example project.
+import os
+import urlparse
+import dj_database_url
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
+# Postgres FTW :)
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'example.db',
-    }
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL', 'postgres://localhost/dynamic_forms')),
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
