@@ -1,11 +1,9 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import json
 import six
 
 from django.core.mail import send_mail
-from django.core.serializers.json import DjangoJSONEncoder
 from django.template.loader import render_to_string
 from django.utils.translation import ugettext, ugettext_lazy as _
 
@@ -63,6 +61,5 @@ def dynamic_form_send_email(form_model, form):
 @formmodel_action(ugettext('Store in database'))
 def dynamic_form_store_database(form_model, form):
     from dynamic_forms.models import FormModelData
-    mapped_data = form.get_mapped_data()
-    value = json.dumps(mapped_data, cls=DjangoJSONEncoder)
-    FormModelData.objects.create(form=form_model, value=value)
+    cleaned_data = form.cleaned_data
+    FormModelData.objects.create(form=form_model, value=cleaned_data)
