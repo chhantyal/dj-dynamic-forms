@@ -1,6 +1,10 @@
 dj-dynamic-forms
 ================
 
+**Update** : This was forked as I needed a better way to store submitted data. I am not going to maintain
+it anymore, so please be careful if you want to use it for future projects. For dynamic forms, upstream 
+should work for you.
+
 Dynamic forms for Django
 
 **dj-dynamic-forms** lets you create your forms through the Django admin.
