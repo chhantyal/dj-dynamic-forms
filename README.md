@@ -47,7 +47,7 @@ Add ``'dynamic_forms.middlewares.FormModelMiddleware'`` to the
     )
 
 You can set ``DYNAMIC_FORMS_EMAIL_RECIPIENTS`` in your settings to a list of
-e-mail addresses. Forms being send via e-mail will then be send to those
+e-mail addresses. Forms being sent via e-mail will then be sent to those
 addresses instead of those defined in ``settings.ADMINS``. Each recipient will
 see *all* other recipients. See [send_mail](https://docs.djangoproject.com/en/stable/topics/email/#django.core.mail.send_mail)
 in the officiall documentation.
